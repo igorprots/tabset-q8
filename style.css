@@ -1,0 +1,119 @@
+h2 {
+    color: #000;
+    text-align: center;
+    font-size: 2em;
+    margin: 20px 0;
+}
+
+.warpper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tab {
+    cursor: pointer;
+    padding: 10px 20px;
+    margin: 0px 2px;
+    display: inline-block;
+    color: #06c
+}
+
+.panels {
+    min-height: 200px;
+    width: 100%;
+    max-width: 1200px;
+    border-radius: 3px;
+}
+
+.panel {
+    display: none;
+    animation: fadein 0.8s;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.panel-title {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.radio {
+    display: none;
+}
+
+#one:checked~.panels #one-panel,
+#two:checked~.panels #two-panel,
+#three:checked~.panels #three-panel,
+#four:checked~.panels #four-panel {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#one:checked~.tabs #one-tab,
+#two:checked~.tabs #two-tab,
+#three:checked~.tabs #three-tab,
+#four:checked~.tabs #four-tab {
+    color: #000;
+    border-bottom: 3px solid #e25822;
+}
+
+.tabs {
+    display: flex;
+    flex-direction: row;
+}
+
+.panel-img {
+    max-width: 100%;
+}
+
+.tabs-title {
+    text-align: center;
+    font-weight: normal;
+    font-size: 20px;
+}
+
+.tab {
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+.tabs-img {
+    padding-right: 4px;
+}
+
+.tabs-chek {
+    font-size: 22px;
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+@media screen and ( max-width:768px) {
+    .tabs {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        background: #ebebeb;
+        min-width: 100%;
+    }
+    .tabs-title {
+        max-width: 370px;
+    }
+    .tabs-img {
+        padding-right: 4px;
+        width: 18px;
+    }
+    .tab {
+        padding: 0;
+    }
+}
